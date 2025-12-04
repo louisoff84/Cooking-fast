@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favoris – Cooking Fast</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>❤️ Vos Favoris</h1>
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="history.html">Historique</a>
+        <button id="logoutBtn">Déconnexion</button>
+    </nav>
+</header>
+
+<main>
+    <div id="favoritesList" class="list-container"></div>
+</main>
+
+<script src="app.js"></script>
+<script>
+// Vérification utilisateur
+const user = JSON.parse(localStorage.getItem("user"));
+if (!user) window.location.href = "login.html";
+
+loadFavorites();
+updateUserUI();
+</script>
+
+</body>
+</html>
