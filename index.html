@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cooking Fast – Générateur de recettes IA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <!-- Logo IA (SVG) -->
+        <svg width="45" height="45" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="45" fill="#ff5722"/>
+            <path d="M30 60 Q50 20 70 60 Z" fill="white"/>
+            <circle cx="50" cy="72" r="6" fill="white"/>
+        </svg>
+        <h1>Cooking Fast</h1>
+    </div>
+
+    <div class="nav-right">
+        <button id="themeToggle">🌙 Mode sombre</button>
+
+        <nav>
+            <a href="favorites.html">Favoris</a>
+            <a href="history.html">Historique</a>
+            <a id="loginBtn" href="login.html">Connexion</a>
+            <button id="logoutBtn" style="display:none;">Déconnexion</button>
+        </nav>
+    </div>
+</header>
+
+
+<main>
+    <!-- Status utilisateur -->
+    <p id="userStatus" class="user-status"></p>
+
+    <!-- Section IA -->
+    <section class="ai-section">
+        <h2>Générateur de recettes IA</h2>
+
+        <textarea id="mealPrompt" placeholder="Décris ton repas ou tes ingrédients..."></textarea>
+        <button id="generateBtn">Générer la recette</button>
+    </section>
+
+    <section id="recipeResult"></section>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
