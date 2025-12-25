@@ -3,33 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MasterChef IA - 2000+ Recettes</title>
+    <title>MasterChef IA | 2000+ Recettes</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+
     <nav class="navbar">
-        <div class="logo">🍳 MasterChef IA</div>
-        <div class="nav-links">
-            <a href="index.html">Recettes</a>
-            <a href="login.html" class="btn-auth">Connexion</a>
+        <div class="logo">🍳 MasterChef<span>IA</span></div>
+        <div class="nav-auth" id="userZone">
+            <a href="login.html" class="btn-login">Connexion</a>
         </div>
     </nav>
 
     <header class="hero">
-        <h1>Découvrez plus de 2000 recettes intelligentes</h1>
-        <p>Générées par l'IA et validées par la communauté.</p>
+        <h1>Quelle est votre envie aujourd'hui ?</h1>
+        <p>Explorez notre base de 2000 idées, sublimées par l'Intelligence Artificielle.</p>
     </header>
 
     <main class="container">
-        <div id="recipeGrid" class="recipe-grid">
+        <div class="recipe-grid" id="recipeGrid">
             </div>
-        
-        <div class="pagination-container">
-            <button id="loadMore" class="btn-more">Charger plus de délices...</button>
+
+        <div class="load-zone">
+            <button id="loadMore" class="btn-more">
+                <i class="fas fa-plus"></i> Charger plus de recettes
+            </button>
         </div>
     </main>
 
+    <div id="recipeModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modalBody">
+                </div>
+        </div>
+    </div>
+
     <script type="module" src="app.js"></script>
+    <script src="mobile-manager.js"></script>
 </body>
 </html>
