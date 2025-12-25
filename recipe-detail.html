@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Détails de la Recette</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="back-link">← Retour aux recettes</a>
+    </nav>
+
+    <div class="container recipe-detail">
+        <div id="recipeHeader">
+            </div>
+
+        <section class="ai-section">
+            <h3>🤖 Assistant IA Groq</h3>
+            <p>Demandez une variante (Sans gluten, Vegan, Rapide...) :</p>
+            <div class="ai-input">
+                <input type="text" id="aiQuery" placeholder="Ex: Rends cette recette végétarienne">
+                <button id="askAI">Adapter</button>
+            </div>
+            <div id="aiResponse" class="ai-box"></div>
+        </section>
+    </div>
+
+    <script type="module" src="recipe-detail.js"></script>
+</body>
+</html>
