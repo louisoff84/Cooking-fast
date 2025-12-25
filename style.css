@@ -57,3 +57,93 @@ body {
     text-decoration: none;
     border-radius: 5px;
 }
+/* style.css - Section Responsive */
+
+/* Base pour mobile d'abord (Mobile First) */
+:root {
+    --primary: #ff4757;
+    --dark: #0f0f0f;
+    --card-bg: #1e1e1e;
+}
+
+/* Style de la Navbar Mobile */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: var(--dark);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-links {
+    display: none; /* Caché par défaut sur mobile */
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: var(--dark);
+    padding: 20px;
+}
+
+.nav-links.active {
+    display: flex; /* Affiché quand on clique sur le burger */
+}
+
+/* Grille de recettes adaptative */
+.recipe-grid {
+    display: grid;
+    gap: 15px;
+    padding: 15px;
+    /* 1 colonne sur mobile, 2 sur tablette, 3+ sur PC */
+    grid-template-columns: repeat(1, 1fr);
+}
+
+@media (min-width: 480px) {
+    .recipe-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1024px) {
+    .recipe-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* Cartes de recettes optimisées pour le tactile */
+.recipe-card {
+    background: var(--card-bg);
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent; /* Enlever le flash bleu sur mobile */
+}
+
+.recipe-card img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Styles pour les pages de Login/Register sur mobile */
+.auth-card {
+    width: 90%;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 25px;
+}
+
+/* Bouton "Charger plus" imposant pour le pouce */
+.btn-more {
+    width: 90%;
+    height: 60px;
+    font-size: 1.1rem;
+    border-radius: 30px;
+}
+
+/* Icône Burger */
+.burger-menu {
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+}
